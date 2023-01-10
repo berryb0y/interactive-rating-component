@@ -1,0 +1,188 @@
+:root {
+    --clr-primary-600: hsl(25, 97%, 53%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-300: hsl(217, 12%, 63%);
+    --clr-neutral-400: hsl(216, 12%, 54%);
+    --clr-neutral-600: hsl(213, 19%, 22%);
+    --clr-neutral-700: hsl(213, 25%, 14%);
+    --clr-neutral-800: hsl(216, 12%, 8%);
+
+    --ff-base: 'Overpass', 'sane-serif';
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+html{
+    background-color: var(--clr-neutral-800);
+    font-family: var(--ff-base);
+}
+
+.align{
+  min-width: 375px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second{
+  top:0px;
+  position: absolute;
+}
+.ratingstate{
+    background-color: var(--clr-neutral-700);
+    display: flex;
+    flex-direction: column;
+    width: 335px;  
+    padding: 1.6rem;
+    gap: 1rem;
+    border-radius: 1rem;
+}
+.thankyoustate{
+    background-color: var(--clr-neutral-700);
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    padding: 2rem 1.6rem 1.6rem 1.6rem;
+    gap:.7rem;
+    border-radius: 1rem;
+    align-items: center;
+    top:5rem;
+}
+.article__star{
+    /* border: 1px solid orange; */
+    width: 2.6rem;
+    padding: .8rem;
+    border-radius: 50%;
+    background-color: var(--clr-neutral-600);
+}
+.article__title{
+    color: var(--clr-neutral-100);
+    font-size: 24px;
+}
+.article__text{
+    font-size: 15px;
+    color: var(--clr-neutral-300);
+    line-height: 1.3rem
+}
+.article__text--thanks{
+    font-size: 15px;
+    color: var(--clr-neutral-300);
+    line-height: 1.3rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.article__ratings{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.article__selected{
+    background-color: var(--clr-neutral-600);
+    color: var(--clr-primary-600);
+    font-weight: var(--fw-regular);
+    padding: .3rem .8rem;
+    border-radius: 1rem;
+    margin: .7rem 0 .7rem 0;
+}
+.article__rating{
+    border-radius: 50%;
+    border: none;
+    width: 2.6rem;
+    height: 2.6rem;
+    color: var(--clr-neutral-400);
+    background-color: var(--clr-neutral-600);
+    z-index: 1 !important; 
+}
+.article__rating:hover{
+    cursor: pointer;
+    color: var(--clr-neutral-100);
+    background-color: gray;
+}
+.article__rating:focus{
+    background-color: var(--clr-primary-600);
+    color: white;
+}
+.article__submit{
+    background-color: var(--clr-primary-600);
+    border: var(--clr-neutral-800) 2px solid;
+    border-radius: 1.5rem;
+    padding: .6rem;
+    color: var(--clr-neutral-100);
+    letter-spacing: 2px;
+    z-index: 1 !important; 
+}
+.article__submit:hover{
+    cursor: pointer;
+    color:hsl(25, 97%, 53%);
+    background-color: var(--clr-neutral-100);
+}
+
+
+
+
+
+
+.hidden{
+    visibility: hidden;
+    bottom: auto;
+    /* position:relative */
+}
+
+
+
+
+/* CSS RESET */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
